@@ -47,7 +47,7 @@ def get_pet_labels(image_dir):
     filename_list = listdir(image_dir)
     
     for file_name in filename_list:
-        if file_name not in result_dict:
+        if file_name not in result_dict and file_name != ".":
             lowercase_label = file_name.lower()            
             lowercase_label = lowercase_label.split("_")
             pet_label = ""
